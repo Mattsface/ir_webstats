@@ -194,6 +194,8 @@ class iRWebStats:
         """ Gets list of connected myracers and notifications. """
         r = self.__req(ct.URL_DRIVER_COUNTS, cookie=self.last_cookie)
         return parse(r)
+        
+    
 
     @logged_in
     def career_stats(self, custid=None):
@@ -487,6 +489,29 @@ class iRWebStats:
         results = [dict(list(zip(header_res, x))) for x in data[4:]]
 
         return event_info, results
+        
+        
+    @logged_in
+    def list_races(self):
+        print("")
+        """ this function should return a list of the current races and times"
+        
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
 
 if __name__ == '__main__':
     irw = iRWebStats()
